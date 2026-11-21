@@ -232,3 +232,20 @@ header, nav { flex-wrap: wrap; }
   .leadership { grid-template-columns: 1fr; }
   .leadership img { max-height: 520px; object-fit: contain; }
 }
+
+.leadership { grid-template-columns: minmax(140px, 220px) 1fr; padding: clamp(24px, 4vw, 60px); gap: clamp(24px, 5vw, 72px); }
+.leadership img { width: 100%; max-width: 220px; border-radius: 110px 110px 8px 8px; }
+.leadership div { padding: 0; }
+.leadership .ceo-note { max-width: 58ch; margin-block: 1.2rem; line-height: 1.65; }
+.award-controls { display: flex; gap: .5rem; margin-bottom: 1rem; }
+.award-controls[hidden] { display: none; }
+.award-controls button { background: #fff; border: 1px solid #bac8ba; color: #183d31; border-radius: 2rem; min-width: 44px; min-height: 44px; padding: .45rem 1rem; font: inherit; cursor: pointer; }
+.awards-grid { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 2px 16px; }
+.awards-grid figure { flex: 0 0 min(78%, 330px); scroll-snap-align: start; background: white; border: 1px solid #dce2d8; border-radius: 18px; overflow: hidden; box-shadow: 0 4px 10px #183d3110; }
+.awards-grid figure img { height: clamp(210px, 28vw, 300px); aspect-ratio: auto; }
+.awards-grid figcaption { padding: 1rem 1.2rem 1.3rem; margin: 0; }
+.awards-grid figcaption p { font: 1rem/1.5 Arial, sans-serif; margin: .55rem 0 0; }
+@media (max-width: 640px) {
+  .leadership { grid-template-columns: 1fr; }
+  .leadership img { max-width: 140px; }
+}
