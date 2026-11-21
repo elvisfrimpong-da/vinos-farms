@@ -209,3 +209,26 @@ nav {
 
 }
 
+
+.brand { font-size: clamp(2rem, 3vw, 3.1rem); letter-spacing: -.055em; }
+header, nav { flex-wrap: wrap; }
+.hero h1 { font-size: clamp(4rem, 7.8vw, 7rem); letter-spacing: -.055em; line-height: .94; }
+.hero h1 em { display: block; color: #f5d383; font-weight: normal; }
+.eyebrow { font-size: .875rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; }
+.intro .eyebrow { color: #f5d383; margin-bottom: 1.8rem; }
+.leadership { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); align-items: center; padding: 0; background: #173f32; color: #fff9e8; }
+.leadership img { filter: none; height: auto; }
+.leadership div { padding: clamp(24px, 5vw, 72px); }
+.leadership .eyebrow { color: #f5d383; margin-bottom: 1.25rem; }
+.leadership h2 { font-size: clamp(2.4rem, 4.8vw, 4.6rem); }
+.leadership a { display: inline-block; color: #f5d383; margin-top: 1rem; }
+.awards { margin: 4rem 0; }
+.awards h2 { font-size: clamp(2.4rem, 5vw, 4.4rem); }
+.awards-grid { display: grid; gap: clamp(14px, 2vw, 28px); grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.awards figure img { aspect-ratio: 3/4; object-fit: contain; background: #ebece3; filter: none; }
+.awards figcaption { font-family: Georgia, serif; font-size: 1.2rem; }
+@media (max-width: 760px) {
+  .awards-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .leadership { grid-template-columns: 1fr; }
+  .leadership img { max-height: 520px; object-fit: contain; }
+}
