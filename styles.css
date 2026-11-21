@@ -249,3 +249,24 @@ header, nav { flex-wrap: wrap; }
   .leadership { grid-template-columns: 1fr; }
   .leadership img { max-width: 140px; }
 }
+
+.photos { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
+.photos figure { min-width: 0; }
+.photos img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 8px; }
+.photos figcaption { margin: 0; padding-top: .65rem; }
+nav { row-gap: .4rem; }
+.contacts { margin: 3rem 0; }
+.contact-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+.contact-grid article { padding: clamp(1.25rem, 3vw, 2rem); border-top: 3px solid #bc975a; background: #eef1e8; }
+.contact-grid h3 { font: normal 1.7rem Georgia, serif; margin: .5rem 0 1rem; }
+.contact-grid dl { display: grid; grid-template-columns: max-content 1fr; gap: .5rem 1rem; }
+.contact-grid dd { margin: 0; overflow-wrap: anywhere; }
+.contact-grid dt { font-weight: 600; }
+.awards-grid { --card-width: min(78%, 330px); }
+.awards-grid figure { flex-basis: var(--card-width); }
+.awards-grid::after { content: ""; flex: 0 0 max(0px, calc(100% - var(--card-width) - 20px)); }
+@media (max-width: 600px) {
+  .photos { gap: 12px; }
+  .photos figcaption { font-size: .94rem; }
+  .contact-grid { grid-template-columns: 1fr; }
+}

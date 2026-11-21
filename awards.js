@@ -26,8 +26,6 @@ toggle.addEventListener('click', () => {
 });
 for (const [id, direction] of [['previous-award', -1], ['next-award', 1]]) {
   document.getElementById(id).addEventListener('click', () => {
-    playing = false;
-    updateControl();
     advance(direction);
   });
 }
@@ -36,5 +34,5 @@ reducedMotion.addEventListener('change', () => {
   updateControl();
 });
 setInterval(() => {
-  if (playing && !document.hidden && !track.matches(':hover, :focus-within')) advance(1);
-}, 5000);
+  if (playing && !document.hidden && !track.matches(':focus-within')) advance(1);
+}, 4000);
